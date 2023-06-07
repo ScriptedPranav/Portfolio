@@ -1,0 +1,161 @@
+$contrast-color: #00D8FF;
+$border-color: #A1A1A1;
+$bg-dark-color: #201F3D;
+$footer-color: #007ACC;
+$bg-clear-color: #2F2C58;
+$default-color: white;
+$sidebar-color: #292950;
+
+$primary-font: 'JetBrains Mono', monospace;
+$secondary-font: 'Source Sans Pro', sans-serif;
+$terceary-font: 'Fira Code', monospace;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root{
+  overflow: hidden;
+}
+
+@mixin imgHover {
+  position: relative;
+  transition: transform 0.5s;
+  cursor: pointer;
+
+  &:hover{
+    transform: scale(1.05)
+  }
+}
+
+@mixin reset-button {
+  border: none;
+  background-color: transparent;
+}
+
+@mixin footer-hover{
+  opacity: 0.5;
+  background-color: $default-color;
+  color: $bg-dark-color;
+
+  svg{
+    fill: $bg-dark-color;
+  }
+}
+
+@mixin subtitle{
+  color: $contrast-color;
+  font-family: $terceary-font;
+  font-size: 20px;
+
+  @media screen and (min-width: 500px){
+    font-size: 23px;
+  }
+}
+
+@mixin title{
+  color: $default-color;
+  font-family: $primary-font;
+  font-weight: 900;
+  font-size: 30px;
+  letter-spacing: 1px;
+
+  @media screen and (min-width: 500px){
+    font-size: 33px;
+  }
+}
+
+@mixin cta{
+  @include reset-button;
+  padding: 12px;
+  border: 2px solid $contrast-color;
+  color: $contrast-color;
+  font-size: 17px;
+  cursor: pointer;
+  width: fit-content;
+  text-decoration: none;
+  font-family: $secondary-font;
+  transition: background-color 0.5s;
+
+  &:hover{
+    background-color: $contrast-color;
+    color: $bg-dark-color;
+
+    svg{
+      fill: $bg-dark-color;
+    }
+  }
+
+  @media screen and (min-width: 500px){
+    font-size: 20px;
+  }
+}
+
+@mixin scrollDown {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $default-color;
+    border-radius: 9px;
+  }
+}
+
+@mixin wrapper{
+  width: 90%;
+  max-width: 1200px;
+  margin: 35px auto;
+}
+
+@mixin card{
+  background-color: $bg-dark-color;
+  padding: 18px 12px;
+  border-radius: 9px;
+}
+
+@mixin highlightedText {
+  display: inline-block;
+  padding: 3px 5px;
+  font-family: $terceary-font;
+}
+
+@mixin grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media screen and (min-width: 735px){
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 1060px){
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@import "./containers/Layout/Layout.scss";
+@import "./containers/Tabs/Tabs.scss";
+@import "./containers/Links/Links.scss";
+@import "./containers/Tags/Tags.scss";
+
+@import "./components/SidebarButton/SidebarButton.scss";
+@import "./components/RepoCard/RepoCard.scss";
+@import "./components/ProjectCard/ProjectCard.scss";
+@import "./components/BlogCard/BlogCard.scss";
+
+@import "./pages/Home/Home.scss";
+@import "./pages/Github/Github.scss";
+@import "./pages/Projects/Projects.scss";
+@import "./pages/Blog/Blog.scss";
+@import "./pages/Contact/Contact.scss";
+@import "./pages/NotFound/NotFound.scss";
+@import "./pages/Settings/Settings.scss";
+@import "./pages/User/User.scss";
