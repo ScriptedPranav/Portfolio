@@ -1,5 +1,5 @@
 import SeeYou from "./assets/images/seeyou.png";
-import Konnekkt from "./assets/images/konnekkt.png";
+import AudioGPT from "./assets/images/audioGPT.png";
 import Bento from "./assets/images/carbon.png";
 
 const data = {
@@ -11,6 +11,20 @@ const data = {
   projects: [
     {
       id: 0,
+      status: "Personal Project",
+      title: "AudioGPT",
+      achievements: [
+        "Built an Audio-Powered-GPT-Bot with OpenAI's GPT-3.5 and GoogleTTS",
+        "Caching of same audio queries for faster response",
+        "Storage of audio files in Google Storage Bucket for faster access",
+      ],
+      technologies: ["GPT-3.5", "ExpressJS", "Text-to-Speech", "React"],
+      repo: "https://github.com/ScriptedPranav/Portfolio",
+      online: "https://portfolio-scriptedpranav.vercel.app/",
+      img: AudioGPT
+    },
+    {
+      id: 1,
       status: "Personal Project",
       title: "SeeYou",
       achievements: [
@@ -38,20 +52,6 @@ const data = {
       online: "https://play.google.com/store/apps/details?id=com.devesh16.bento&pli=1",
       img: Bento
     },
-    {
-      id: 2,
-      status: "Personal Project",
-      title: "Konnekt",
-      achievements: [
-        "Built a social media application using ReactJs and Node",
-        "Scalable NodeJs Server handling upto 40k requests per cycle",
-        "Realtime chatting feature built with socket.io",
-      ],
-      technologies: ["ReactJs", "NodeJs", "MongoDB", "Socket.io"],
-      repo: "https://github.com/ScriptedPranav/mern_konnekt_api-client",
-      online: "https://konnekt-social.onrender.com/",
-      img: Konnekkt
-    }
   ],
   repos: [
     {
