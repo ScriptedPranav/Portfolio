@@ -1,5 +1,5 @@
 import SeeYou from "./assets/images/seeyou.png";
-import AudioGPT from "./assets/images/audioGPT.png";
+import AudioGPT from "./assets/images/AudioGPT.png";
 import Bento from "./assets/images/carbon.png";
 
 const data = {
@@ -19,8 +19,8 @@ const data = {
         "Storage of audio files in Google Storage Bucket for faster access",
       ],
       technologies: ["GPT-3.5", "ExpressJS", "Text-to-Speech", "React"],
-      repo: "https://github.com/ScriptedPranav/Portfolio",
-      online: "https://portfolio-scriptedpranav.vercel.app/",
+      repo: "https://github.com/ScriptedPranav/AudioGPT-client",
+      online: "https://audio-gpt-client.vercel.app/",
       img: AudioGPT
     },
     {
